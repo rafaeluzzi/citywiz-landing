@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 .heading-font {
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -20,6 +20,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
@@ -49,9 +50,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
 }
 p {
   font-size: 18px;
@@ -69,7 +71,7 @@ p {
   letter-spacing: 1px;
 }
 .navbar-default .navbar-header .navbar-brand {
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
   color: #fdcc52;
@@ -151,11 +153,11 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), #e79f29;
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #e79f29,#eda52f);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+  background: url("http://citywiz.com/landing/assets/img/bg.jpg"), linear-gradient(to left,#e79f29,#eda52f);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
@@ -201,8 +203,9 @@ header .device-container .screen img {
     max-width: none;
     margin: 0;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    /*top: 50%;
+    transform: translateY(-50%);*/
+    top: 100px;
   }
   header .header-content .header-content-inner h1 {
     font-size: 35px;
