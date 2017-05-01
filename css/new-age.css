@@ -143,6 +143,14 @@ p {
     background-color: white;
     border-color: rgba(34, 34, 34, 0.1);
   }
+  .logoc{
+    opacity:0;
+    transition: all 0.35s;
+
+  }
+  .navbar-default.affix .logoc{
+    opacity:1;
+  }
   .navbar-default.affix .navbar-header .navbar-brand {
     color: #222222;
   }
