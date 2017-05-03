@@ -36,7 +36,7 @@ a:focus {
   color: #fcbd20;
 }
 .iphne{
-  background-image: url(../img/iphone-reg.png);position: absolute;
+  position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -45,6 +45,13 @@ a:focus {
     height: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    transition: all 0.35s;
+}
+.es{
+  background-image: url(../img/iphone-reg-es.png);
+}
+.en{
+  background-image: url(../img/iphone-reg.png);
 }
 hr {
   max-width: 100px;
@@ -158,6 +165,113 @@ h6.description{
 i.red{
     color:#BC0213;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 10px;
+  pointer-events: none;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: #2b2b2b;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #2b2b2b;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #2b2b2b;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #2b2b2b;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 34px;
+  background-color: #f0f0f0;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #f0f0f0;
+  -webkit-
+
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #f5a503;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label {
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+}
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -184,7 +298,6 @@ i.red{
   padding: 8px 10px;
 }
 .navbar-default .nav > li > a {
-  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
@@ -266,7 +379,7 @@ header {
 }
 header .header-content {
   text-align: center;
-  padding: 150px 0 50px;
+  padding: 100px 0 50px;
   position: relative;
 }
 header .header-content .header-content-inner {
@@ -301,6 +414,7 @@ header .device-container .screen img {
     text-align: left;
     padding: 0;
     height: 100vh;
+    padding: 150px 0 50px;
   }
   header .header-content .header-content-inner {
     max-width: none;
