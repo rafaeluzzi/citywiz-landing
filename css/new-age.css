@@ -184,7 +184,7 @@ i.red{
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-  color: #2b2b2b;
+  color: #ffffff;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
@@ -194,7 +194,7 @@ input.check-toggle-round-flat:checked ~ .on {
 .switch > span.on {
   left: 0;
   padding-left: 2px;
-  color: #2b2b2b;
+  color: #ffffff;
 }
 
 .switch > span.off {
@@ -666,4 +666,7 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+}
+.showme{
+  display: block !important;
 }
