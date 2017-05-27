@@ -1,6 +1,40 @@
-var App = angular.module('App', ['pascalprecht.translate']);
+var App = angular.module('App', ['pascalprecht.translate','ngRoute']);
 
-App.controller('appCtrl', function ($scope,$timeout,  $window,$translate) {
+App.config(function($routeProvider) {
+    $routeProvider
+
+      // route for the home page
+      .when('/', {
+        templateUrl : 'lib/pages/home.html',
+        controller  : 'appCtrl'
+      })
+
+      // route for the about page
+      .when('/abt', {
+        templateUrl : 'lib/pages/test.html',
+        controller  : 'pageCtrl'
+      })
+
+      // route for the contact page
+      .when('/view/:orderId', {
+        templateUrl : 'lib/pages/test.html',
+        controller  : 'pageCtrl'
+      });
+  });
+App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams, $location) {
+
+$scope.$route = $route;
+$scope.$location = $location;
+     $scope.$routeParams = $routeParams;
+     $scope.name = 'pageController';
+  $scope.order_id = $routeParams.orderId;
+  $scope.message = 'Look! I am an about page.';
+});
+App.controller('appCtrl', function ($scope,$timeout,  $window,$translate,$route, $location,$routeParams) {
+ $scope.$route = $route;
+$scope.$location = $location;
+     $scope.$routeParams = $routeParams;
+     $scope.name = 'appCtrl';
   $scope.helloworld = "hey! hello world!";
   $scope.data = {
   cb2: 'en'
