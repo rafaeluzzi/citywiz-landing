@@ -1,4 +1,4 @@
-var App = angular.module('App', ['pascalprecht.translate','ngRoute','ApiModel','ngSanitize']);
+var App = angular.module('App', ['pascalprecht.translate','ngRoute','ApiModel','ngSanitize','ngLoadScript']);
 
 App.config(function($routeProvider) {
     $routeProvider
@@ -23,7 +23,18 @@ App.config(function($routeProvider) {
       .when('/view/:orderId/:slug', {
         templateUrl : 'lib/pages/test.html',
         controller  : 'pageCtrl'
-      });
+      })
+      .when('/event/:eventId', {
+        templateUrl : 'lib/pages/event.html',
+        controller  : 'pageCtrl'
+      })
+      .when('/event/:eventId/:slug', {
+        templateUrl : 'lib/pages/event.html',
+        controller  : 'pageCtrl'
+      })
+      .otherwise({
+                redirectTo: '/'
+            });
   });
 App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams, $location,AppRestangular) {
 
@@ -31,7 +42,13 @@ $scope.$route = $route;
 $scope.$location = $location;
      $scope.$routeParams = $routeParams;
      $scope.name = 'pageController';
-  $scope.order_id = $routeParams.orderId;
+  if($routeParams.eventId){
+    $scope.order_id = $routeParams.eventId
+    $scope.pageType = "event";
+  }else{
+    $scope.order_id = $routeParams.orderId;
+    $scope.pageType = "eat";
+  }
   $scope.message = 'Look! I am an about page.';
 //load data
 
@@ -60,7 +77,13 @@ $scope.$location = $location;
 
 
   };
-var itemdata = AppRestangular.one("id", $scope.order_id);
+if($scope.pageType == 'eat'){
+  var itemdata = AppRestangular.one("id", $scope.order_id);
+}else if($scope.pageType == 'event'){
+
+  var itemdata = AppRestangular.one("eventid", $scope.order_id);
+}
+
   $scope.loadDetails();
 //load data ends
 });
