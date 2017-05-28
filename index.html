@@ -123,8 +123,9 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bb53886b-457a-42a3-b725-411e18c9026e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 <script>
 setTimeout(function() {
+    window.thisScope = angular.element(document.getElementById('pageController')).scope();
         var map = L.map('map');
-        map.setView([18.015936532937, -66.381328613805], 12);
+        map.setView([thisScope.card.latitude, thisScope.card.longitude], 12);
         L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicmFmYWVsdXp6aSIsImEiOiJFUF8tczRBIn0.MoH4ToSyQCxdg4NU68Fm_g', {
             maxZoom: 18,
             attribution: '&copy; Mapbox &copy; OpenStreetMap'
@@ -146,7 +147,7 @@ setTimeout(function() {
     //shadowAnchor: [4, 62],  // the same for the shadow
     //popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
-        var marker = L.marker([18.015936532937, -66.381328613805], {icon: eatIcon}).addTo(map).on('click', function () {
+        var marker = L.marker([thisScope.card.latitude, thisScope.card.longitude], {icon: eatIcon}).addTo(map).on('click', function () {
             sidebar.toggle();
         });
         map.on('click', function () {
@@ -167,7 +168,7 @@ setTimeout(function() {
         L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {
             console.log('Close button clicked.');
         });
-}, 100);
+}, 500);
     </script>
 </body>
 
