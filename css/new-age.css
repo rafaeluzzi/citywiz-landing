@@ -670,3 +670,26 @@ body {
 .showme{
   display: block !important;
 }
+.leaflet-sidebar .close {
+    right: 30px;
+    top: 25px;
+}
+.ion-ios-star-city{
+   background-size:cover;
+  background-image: url(../img/onstar.svg);
+
+display: inline-block;
+}
+.ion-ios-star-outline-city{
+   background-size:cover;
+  background-image: url(../img/offstar-outline.svg);
+
+display: inline-block;
+}
+.sm-onstar{
+  width:24px;
+height: 24px;
+}
+.avgrating{
+  margin: 10px 0;
+}

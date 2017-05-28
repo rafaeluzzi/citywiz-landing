@@ -90,8 +90,9 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
 
 
 
-    <!-- jQuery -->
-    <script src="lib/jquery/jquery.min.js"></script>
+<!-- all js is loaded on templates -->
+ <!-- jQuery -->
+    <script  src="lib/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
@@ -121,55 +122,8 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
 </script>
 
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bb53886b-457a-42a3-b725-411e18c9026e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-<script>
-setTimeout(function() {
-    window.thisScope = angular.element(document.getElementById('pageController')).scope();
-        var map = L.map('map');
-        map.setView([thisScope.card.latitude, thisScope.card.longitude], 12);
-        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicmFmYWVsdXp6aSIsImEiOiJFUF8tczRBIn0.MoH4ToSyQCxdg4NU68Fm_g', {
-            maxZoom: 18,
-            attribution: '&copy; Mapbox &copy; OpenStreetMap'
-        }).addTo(map);
-        var sidebar = L.control.sidebar('sidebar', {
-            closeButton: true,
-            position: 'left'
-        });
-        map.addControl(sidebar);
-        setTimeout(function () {
-            sidebar.show();
-        }, 500);
-        var eatIcon = L.icon({
-    iconUrl: 'lib/map/images/marker-icon.png',
 
-    iconSize:     [51, 51], // size of the icon
-    //shadowSize:   [61, 61], // size of the shadow
-    //iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    //shadowAnchor: [4, 62],  // the same for the shadow
-    //popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-        var marker = L.marker([thisScope.card.latitude, thisScope.card.longitude], {icon: eatIcon}).addTo(map).on('click', function () {
-            sidebar.toggle();
-        });
-        map.on('click', function () {
-            sidebar.hide();
-        })
-        sidebar.on('show', function () {
-            console.log('Sidebar will be visible.');
-        });
-        sidebar.on('shown', function () {
-            console.log('Sidebar is visible.');
-        });
-        sidebar.on('hide', function () {
-            console.log('Sidebar will be hidden.');
-        });
-        sidebar.on('hidden', function () {
-            console.log('Sidebar is hidden.');
-        });
-        L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {
-            console.log('Close button clicked.');
-        });
-}, 500);
-    </script>
+
 </body>
 
 </html>
