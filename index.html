@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -23,8 +23,13 @@
     <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
 
     <!-- Theme CSS -->
+
+
+
     <link href="css/new-age.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" href="lib/map/L.Control.Sidebar.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -81,7 +86,7 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
       <!-- angular templating -->
         <!-- this is where content will be injected -->
 
-    <div ng-view></div>
+    <div style="height:100%" ng-view></div>
 
 
 
@@ -97,16 +102,64 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
     <!-- angular js -->
     <script src="bower_components/angular/angular.min.js"></script>
      <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
      <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- Theme JavaScript -->
+     <script src="js/underscore-min.js"></script>
+     <script src="js/restangular.min.js"></script>
+        <!-- Theme JavaScript -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <script src="lib/map/L.Control.Sidebar.js"></script>
     <script src="js/new-age.min.js"></script>
+ <script src="js/api.js"></script>
+
     <script src="js/app.js"></script>
+
     <script>
     $('.carousel').carousel({
   interval: 5000
 })
 </script>
+
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bb53886b-457a-42a3-b725-411e18c9026e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<script>
+setTimeout(function() {
+        var map = L.map('map');
+        map.setView([18.015936532937, -66.381328613805], 12);
+        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicmFmYWVsdXp6aSIsImEiOiJFUF8tczRBIn0.MoH4ToSyQCxdg4NU68Fm_g', {
+            maxZoom: 18,
+            attribution: '&copy; Mapbox &copy; OpenStreetMap'
+        }).addTo(map);
+        var sidebar = L.control.sidebar('sidebar', {
+            closeButton: true,
+            position: 'left'
+        });
+        map.addControl(sidebar);
+        setTimeout(function () {
+            sidebar.show();
+        }, 500);
+        var marker = L.marker([18.015936532937, -66.381328613805]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+        map.on('click', function () {
+            sidebar.hide();
+        })
+        sidebar.on('show', function () {
+            console.log('Sidebar will be visible.');
+        });
+        sidebar.on('shown', function () {
+            console.log('Sidebar is visible.');
+        });
+        sidebar.on('hide', function () {
+            console.log('Sidebar will be hidden.');
+        });
+        sidebar.on('hidden', function () {
+            console.log('Sidebar is hidden.');
+        });
+        L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {
+            console.log('Close button clicked.');
+        });
+}, 100);
+    </script>
 </body>
 
 </html>
