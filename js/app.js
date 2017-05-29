@@ -36,6 +36,15 @@ App.config(function($routeProvider) {
                 redirectTo: '/'
             });
   });
+App.filter('removeAt', function() {
+    return function (value) {
+        var s = value;
+ var n = s.indexOf('@');
+  s = s.substring(0, n != -1 ? n : s.length);
+  return s;
+    };
+
+  });
 App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams, $location,AppRestangular) {
 
 $scope.$route = $route;
