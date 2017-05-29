@@ -63,7 +63,7 @@ $scope.$location = $location;
 
 /************* load dynamic data based on guide ************/
   $scope.loadDetails = function() {
-    $scope.loading = true;
+$scope.loaded = false;
     itemdata.get().then(function(data) {
 
     $scope.card = data;
@@ -76,10 +76,11 @@ $scope.$location = $location;
         setTimeout(function() {
 
 
-       $scope.loading = false;
+       $scope.loaded = true;
+       $scope.$apply();
 
 
-    }, 0);
+    }, 500);
 
 
 });

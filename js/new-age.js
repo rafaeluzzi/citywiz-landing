@@ -21,11 +21,6 @@
         $('.navbar-toggle:visible').click();
     });
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 50
-        }
-    })
+
 
 })(jQuery); // End of use strict
