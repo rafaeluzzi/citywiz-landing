@@ -5,6 +5,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
+      margin-top: 50px;
   z-index: 2000; }
   .leaflet-sidebar.left {
     left: -500px;
