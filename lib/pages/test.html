@@ -18,9 +18,9 @@
     <div id="sidebar">
         <div class="row" style="text-align: center;"> <!-- {{eat.social_imgs[0].img_path}} -->
 <div style="position:relative;">
-                <div class="menu-image"  style="height:230px;margin-bottom:0">
-                <img ng-if="card.social_imgs[0].eat_source != 'stock'" width="100%" height="230" ng-src="{{card.social_imgs[0].img_path}}?exp=-5&fit=crop&h=230&usm=20&chromasub=444&w=360&shad=20&dpr=2">
-                <img ng-if="card.social_imgs[0].eat_source == 'stock'" width="100%" height="230" ng-src="{{card.social_imgs[0].img_path}}?exp=-5&fit=crop&h=230&usm=20&chromasub=444&w=360&shad=20&dpr=2&txt64=bm90IGFjdHVhbCBpbWFnZQ&txtclr=ddd&txtsize=10">
+                <div class="menu-image"  style="height:300px;margin-bottom:0">
+                <img ng-if="card.social_imgs[0].eat_source != 'stock'" width="100%" height="300" ng-src="{{card.social_imgs[0].img_path}}?exp=-5&fit=crop&h=300&usm=20&chromasub=444&w=337&shad=20&dpr=2">
+                <img ng-if="card.social_imgs[0].eat_source == 'stock'" width="100%" height="300" ng-src="{{card.social_imgs[0].img_path}}?exp=-5&fit=crop&h=300&usm=20&chromasub=444&w=337&shad=20&dpr=2&txt64=bm90IGFjdHVhbCBpbWFnZQ&txtclr=ddd&txtsize=10">
 
                 </div>
             </div>
@@ -99,7 +99,7 @@ setTimeout(function() {
   var markerBounds = L.latLngBounds(latLngs);
   map.fitBounds(markerBounds);
 };
-}, 500);
+}, 800);
     </script>
 
 
@@ -113,8 +113,8 @@ setTimeout(function() {
     <div class="app-banner">
         <div class="app-banner-info">
             <a href=""><img src="img/logo.png" class="logo"></a>
-            <h2 class="slogan">Your local discovery guide</h2>
-            <p class="desc">We help you discover and find everything in your city, because life it's easier when you know what's around you.</p>
+            <h2 class="slogan">{{'LANGBOARD' | translate}}</h2>
+            <p class="desc">{{'APPHERO2' | translate}}</p>
             <a href=""><img src="img/Apple-Store-Button.png" class="download-app"></a>
         </div>
       </div>

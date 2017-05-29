@@ -522,7 +522,7 @@ section.download .badges .badge-link img {
 }
 @media (min-width: 768px) {
   section.download h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 section.features .section-heading {
@@ -721,6 +721,9 @@ body {
 }
 .showme{
   display: block !important;
+}
+.showmeinline{
+  display: inline-block !important;
 }
 .leaflet-sidebar .close {
     right: 30px;

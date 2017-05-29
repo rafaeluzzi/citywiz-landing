@@ -17,9 +17,9 @@
     <div id="sidebar">
         <div class="row" style="text-align: center;"> <!-- {{eat.social_imgs[0].img_path}} -->
 <div style="position:relative;">
-                <div class="menu-image"  style="height:100%;width:100%;margin-bottom:0">
-                <img ng-if="card.venue_info.social_imgs[0].venue_source != 'stock'" width="100%" ng-src="{{card.venue_info.social_imgs[0].img_path}}?exp=-5&fit=crop&h=230&usm=20&chromasub=444&w=450&shad=20&dpr=2">
-                <img ng-if="card.venue_info.social_imgs[0].venue_source == 'stock'" width="100%" height="230" ng-src="{{card.venue_info.social_imgs[0].img_path}}?exp=-5&fit=crop&h=230&usm=20&chromasub=444&w=450&shad=20&dpr=2&txt64=bm90IGFjdHVhbCBpbWFnZQ&txtclr=ddd&txtsize=10">
+                <div class="menu-image"  style="height:100%;width:100%;height:300px;margin-bottom:0">
+                <img ng-if="card.venue_info.social_imgs[0].venue_source != 'stock'" width="100%" height="300" ng-src="{{card.venue_info.social_imgs[0].img_path}}?exp=-5&fit=crop&h=300&usm=20&chromasub=444&w=337&shad=20&dpr=2">
+                <img ng-if="card.venue_info.social_imgs[0].venue_source == 'stock'" width="100%" height="300" ng-src="{{card.venue_info.social_imgs[0].img_path}}?exp=-5&fit=crop&h=300&usm=20&chromasub=444&w=337&shad=20&dpr=2&txt64=bm90IGFjdHVhbCBpbWFnZQ&txtclr=ddd&txtsize=10">
 
                 </div>
             </div>
@@ -79,12 +79,14 @@ setTimeout(function() {
         })
         sidebar.on('show', function () {
             console.log('Sidebar will be visible.');
+            map.panTo([thisScope.card.latitude, thisScope.card.longitude]);
         });
         sidebar.on('shown', function () {
             console.log('Sidebar is visible.');
         });
         sidebar.on('hide', function () {
             console.log('Sidebar will be hidden.');
+            map.panTo([thisScope.card.latitude, thisScope.card.longitude]);
         });
         sidebar.on('hidden', function () {
             console.log('Sidebar is hidden.');
@@ -713,6 +715,14 @@ function hasTag(tagName) {
     </div>
 
     <div id="map"></div>
+    <div class="app-banner">
+        <div class="app-banner-info">
+            <a href=""><img src="img/logo.png" class="logo"></a>
+            <h2 class="slogan">{{'LANGBOARD' | translate}}</h2>
+            <p class="desc">{{'APPHERO2' | translate}}</p>
+            <a href=""><img src="img/Apple-Store-Button.png" class="download-app"></a>
+        </div>
+      </div>
 </main>
 
 <script type="text/javascript-lazy">
