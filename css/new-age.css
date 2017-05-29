@@ -371,6 +371,7 @@ input.check-toggle-round-flat:checked + label:after {
 .app-banner{display: none;}
 @media (min-width: 768px) {
   .app-banner{display: block !important;}
+  .leaflet-sidebar {margin-top: 0px !important;}
   .navbar-default {
     background-color: transparent;
     border-color: transparent;
