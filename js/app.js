@@ -80,7 +80,7 @@ $scope.loaded = false;
        $scope.$apply();
 
 
-    }, 500);
+    }, 1000);
 
 
 });
@@ -110,7 +110,14 @@ $scope.$location = $location;
     $translate.use(key);
   };
 
+setTimeout(function() {
 
+
+       $scope.loaded = true;
+       $scope.$apply();
+
+
+    }, 500);
 });
 App.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('en', {
