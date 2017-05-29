@@ -79,12 +79,14 @@ setTimeout(function() {
         })
         sidebar.on('show', function () {
             console.log('Sidebar will be visible.');
+            map.panTo([thisScope.card.latitude, thisScope.card.longitude]);
         });
         sidebar.on('shown', function () {
             console.log('Sidebar is visible.');
         });
         sidebar.on('hide', function () {
             console.log('Sidebar will be hidden.');
+            map.panTo([thisScope.card.latitude, thisScope.card.longitude]);
         });
         sidebar.on('hidden', function () {
             console.log('Sidebar is hidden.');
@@ -92,6 +94,11 @@ setTimeout(function() {
         L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {
             console.log('Close button clicked.');
         });
+        function centerLeafletMapOnMarker(map, marker) {
+  var latLngs = [ marker.getLatLng() ];
+  var markerBounds = L.latLngBounds(latLngs);
+  map.fitBounds(markerBounds);
+};
 }, 500);
     </script>
 
@@ -103,6 +110,14 @@ setTimeout(function() {
     </div>
 
     <div id="map"></div>
+    <div class="app-banner">
+        <div class="app-banner-info">
+            <a href=""><img src="img/logo.png" class="logo"></a>
+            <h2 class="slogan">Your local discovery guide</h2>
+            <p class="desc">We help you discover and find everything in your city, because life it's easier when you know what's around you.</p>
+            <a href=""><img src="img/Apple-Store-Button.png" class="download-app"></a>
+        </div>
+      </div>
 </main>
 
 <script type="text/javascript-lazy">

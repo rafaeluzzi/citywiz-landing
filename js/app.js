@@ -121,14 +121,14 @@ setTimeout(function() {
 });
 App.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('en', {
-            LANGBOARD: "Your local discovery guide",
-            DOWNAPP: "Get it for free!",
-            APPHERO2: "We help you discover and find everything in your city, because life it's easier when you know what's around you.",
+            LANGBOARD: "Local Discovery Guides",
+            DOWNAPP: "Get the free app!",
+            APPHERO2: "CityWiz helps you discover everything in your city. Life is easier when you know what's around you!",
         })
         .translations('es', {
-            LANGBOARD: "Su guía de descubrimiento local",
-            DOWNAPP: "¡Descargar gratis!",
-            APPHERO2: "Te ayudamos a descubir y encontrar todo en tu ciudad, porque la vida es más fácil cuando sabes lo que te rodea.",
+            LANGBOARD: "Guías de descubrimiento local",
+            DOWNAPP: "¡Descarga el app gratis!",
+            APPHERO2: "CityWiz te ayuda a descubrir tu ciudad. ¡La vida es más fácil cuando sabes lo que está cerca de ti!",
 
         });
 $translateProvider.preferredLanguage('en');
