@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">
-                    <div class="header-content animated fadeInLeftBig">
+                    <div class="header-content">
                         <div class="header-content-inner">
                             <!--<div class="col-sm-6" style="width:90px;height:90px;margin:auto;padding:0">
                                 <img class="img-responsive" src="img/appicon.png" alt="citywiz-app">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3 col-sm-offset-2">
-                    <div class="device-container animated fadeInRightBig" >
+                    <div class="device-container" >
                     <div class="device-mockup iphone6 portrait white">
                     <div class="iphne {{data.cb2}}"></div>
     </div>
@@ -80,11 +80,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 class="section-heading">Discover what all the buzz is about!</h2>
-                    <p>Our app is available on any mobile device! Download now to get started!</p>
-                    <div class="badges">
-                        <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+                    <h2 class="section-heading">{{'DOWNLOADTITLE' | translate}}</h2>
+                    <p>{{'DOWNLOAD' | translate}}</p>
+                    <div class="badges" ng-model="data.cb2">
                         <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+                        <a ng-class="{showmeinline: lang() == 'en'}" class="badge-link typeform-share hide" href="https://rafaeluzzzi.typeform.com/to/e4dLzv" data-mode="2" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
+                         <a ng-class="{showmeinline: lang() == 'es'}" class="badge-link typeform-share hide" href="https://rafaeluzzzi.typeform.com/to/BLySvm" data-mode="2" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
+
+
                     </div>
                 </div>
             </div>
@@ -114,11 +117,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div>
-                                <div class="feature-item" style="text-align:left">
-                                 <h3>We believe that life gets a lot easier when you know what's around you.</h3>
-                                    <p class="text-muted">Citywiz is a free and easy to use Iphone app (soon on android) that will help you discover, find and connect to everything local at any city of Puerto Rico (soon other countries). </p>
-                                    <p class="text-muted">Whether you are a visitor or a local, looking for a place to satisfy your cravings , have a nice dinner, going for a night out ,maybe looking to get the local intel on events and activities around you or even searching for a new house to buy or rent, our app will help you find and stay connected to everything your city has to offer. </p>
-                                    <p class="text-muted">New city wizards (guides) will be added regularly for you to discover cool and necessary things like food, music, art, events, sports, living, places to stay, professional services, touring and shopping. </p>
+                                <div style="text-align:left">
+                                 <h3>{{'ABOUTUSTITLE' | translate}}</h3>
+                                    <span class="text-muted" translate="APPABOUTUS" translate-compile></span>
 
                                 </div>
                             </div>
@@ -141,8 +142,8 @@
                         <div class="row">
                             <div>
                                 <div style="text-align:left">
-                                    <h3>How wonderful to meet you.</h3>
-                                    <p class="text-muted">We are a small but passionate Puerto Rican team focused on delivering new and fun technology products that will help you search and discover.</p>
+                                    <h3>{{'TEAMTITLE' | translate}}</h3>
+                                    <span class="text-muted" translate="TEAM" translate-compile></span>
                                 </div>
                             </div>
 
