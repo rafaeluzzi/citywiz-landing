@@ -1,10 +1,5 @@
 <main id="pageController" ng-controller="pageCtrl" style="height:100%">
-<div class="jumbotron text-center" style="margin-bottom:0;background:#fff">
 
-
-
-
-</div>
 <style>
         body {
             padding: 0;
@@ -16,7 +11,9 @@
         .lorem {
             font-style: italic;
             color: #AAA;
+
         }
+
     </style>
     <div id="sidebar">
         <div class="row" style="text-align: center;"> <!-- {{eat.social_imgs[0].img_path}} -->
@@ -108,4 +105,8 @@ setTimeout(function() {
     <div id="map"></div>
 </main>
 
+<script type="text/javascript-lazy">
 
+    // Offset for Main Navigation
+    $('#mainNav').removeClass( "navbar navbar-default navbar-fixed-top affix-top" ).addClass( "navbar navbar-default navbar-fixed-top affix" );
+</script>
