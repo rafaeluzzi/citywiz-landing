@@ -15,7 +15,7 @@
                                 {{'LANGBOARD' | translate}}
                             </h1>
                             <p style="font-size:24px">{{'APPHERO2' | translate}}</p>
-                            <a href="#download" class="btn btn-outline btn-xl page-scroll">{{'DOWNAPP' | translate}}</a>
+                            <a ng-click="gotoElement('download')" class="btn btn-outline btn-xl page-scroll">{{'DOWNAPP' | translate}}</a>
 
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                         </div>-->
                     </div>
                 </div>
-                <a class="scrolld page-scroll" href="#download"><span></span></a>
+                <a class="scrolld page-scroll" ng-click="gotoElement('download')"><span></span></a>
             </div>
         </div>
     </header>
@@ -83,9 +83,9 @@
                     <h2 class="section-heading">{{'DOWNLOADTITLE' | translate}}</h2>
                     <p>{{'DOWNLOAD' | translate}}</p>
                     <div class="badges" ng-model="data.cb2">
-                        <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-                        <a ng-class="{showmeinline: lang() == 'en'}" class="badge-link typeform-share hide" href="https://rafaeluzzzi.typeform.com/to/e4dLzv" data-mode="2" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
-                         <a ng-class="{showmeinline: lang() == 'es'}" class="badge-link typeform-share hide" href="https://rafaeluzzzi.typeform.com/to/BLySvm" data-mode="2" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
+                        <a class="badge-link"><img src="img/app-store-badge.svg" alt=""></a>
+                        <a ng-class="{hide: lang() == 'es'}" class="typeform-share link badge-link" href="https://rafaeluzzzi.typeform.com/to/e4dLzv" data-mode="2" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
+                         <a ng-class="{showmeinline: lang() == 'es'}" class="typeform-share link badge-link hide" href="https://rafaeluzzzi.typeform.com/to/BLySvm" data-mode="2" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
 
 
                     </div>
@@ -253,9 +253,10 @@
 <script type="text/javascript-lazy">
 
     // Offset for Main Navigation
-    $('#mainNav').affix({
+   $('#mainNav').affix({
         offset: {
             top: 50
         }
     })
 </script>
+
