@@ -369,7 +369,9 @@ input.check-toggle-round-flat:checked + label:after {
   background-color: transparent;
 }
 .app-banner{display: none;}
+.typeform-popup-wrapper .typeform-close-icon {right: 5px !important;}
 @media (min-width: 768px) {
+  .typeform-popup-wrapper .typeform-close-icon {right: -38px !important;}
   .app-banner{display: block !important;}
   .leaflet-sidebar {margin-top: 0px !important;}
   .navbar-default {
