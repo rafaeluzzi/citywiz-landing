@@ -83,6 +83,7 @@ $scope.loaded = false;
 
 
        $scope.loaded = true;
+       $scope.lang = function(){ return $translate.use();}
        $scope.$apply();
 
 
