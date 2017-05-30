@@ -43,7 +43,7 @@ App.filter('removeAt', function() {
     };
 
   });
-App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams, $location,AppRestangular) {
+App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams, $location,AppRestangular,anchorSmoothScroll,urlService) {
 
 $scope.$route = $route;
 $scope.$location = $location;
@@ -58,7 +58,15 @@ $scope.$location = $location;
   }
   $scope.message = 'Look! I am an about page.';
 //load data
+$scope.gotoElement = function (eID){
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      urlService.setUrl(eID);
+      //$location.hash(eID);
+      $location.url("/"+eID);
 
+
+    };
 /************* load dynamic data based on guide ************/
   $scope.loadDetails = function() {
 $scope.loaded = false;
@@ -95,14 +103,14 @@ if($scope.pageType == 'eat'){
   $scope.loadDetails();
 //load data ends
 });
-App.controller('appCtrl', function ($scope,$timeout,  $window,$translate,$route, $location,$routeParams,anchorSmoothScroll) {
+App.controller('appCtrl', function ($scope,$timeout,  $window,$translate,$route, $location,$routeParams,anchorSmoothScroll,urlService) {
  $scope.$route = $route;
 $scope.$location = $location;
      $scope.$routeParams = $routeParams;
      $scope.name = 'appCtrl';
   $scope.helloworld = "hey! hello world!";
   $scope.data = {
-  cb2: 'en'
+  cb2: 'es'
 };
    $scope.changeLanguage = function (key) {
     $translate.use(key);
@@ -121,7 +129,11 @@ setTimeout(function() {
 
 
        $scope.loaded = true;
+       var hash = urlService.getUrl();
        $scope.lang = function(){ return $translate.use();}
+       if(hash){
+            anchorSmoothScroll.scrollTo(hash);
+       }
        $scope.$apply();
 
 
@@ -151,7 +163,7 @@ App.config(['$translateProvider', function ($translateProvider) {
             DOWNLOADTITLE: "¡Comienza a descubrir tu ciudad ya!",
             DOWNLOAD: "Nuestra aplicación ya está disponible para iPhone®. ¡Descargue ahora y comienza a descubrir!"
         });
-$translateProvider.preferredLanguage('en');
+$translateProvider.preferredLanguage('es');
 }]);
 App.service('anchorSmoothScroll', function(){
 
@@ -204,5 +216,22 @@ App.service('anchorSmoothScroll', function(){
         }
 
     };
+
+});
+App.service('urlService', function() {
+  var urlHash;
+
+  var setUrl = function(hash) {
+      urlHash = hash;
+  };
+
+  var getUrl = function(){
+      return urlHash;
+  };
+
+  return {
+    setUrl: setUrl,
+    getUrl: getUrl
+  };
 
 });
