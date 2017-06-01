@@ -84,7 +84,38 @@
 
   </span>
 </div>
-
+<hr>
+<!-- address -->
+<div class="row" style="padding: 20px 15px 0px;">
+                  <div class="col" style="padding:0">
+                  <div class="col-info">
+                    <title class="country-title middle" style="color: #000;font-size: 12px;
+padding: 5px 0;
+font-weight: bold;
+display: block;">{{'PHONE' | translate}}</title>
+                    <span ng-if="card.phone" ng-bind-html="card.phone" ></span>
+                    <span ng-if="!card.phone">{{'NA' | translate}}</span>
+                    </div>
+                   </div>
+                  <div class="col" style="padding:0" ng-click="show=null;getInfo(card.result_id)">
+                  <div class="col-info">
+                   <title class="country-title middle" style="color: #000;
+font-size: 12px;
+padding: 5px 0;
+font-weight: bold;
+display: block;">{{'ADDRESS' | translate}}</title>
+                  <span ng-bind-html="card.add">,</span>
+                  <span ng-bind-html="card.city+ ', Puerto Rico'"></span>
+                  </div>
+                  </div>
+            </div><!-- /row -->
+<!-- /address -->
+<!-- social -->
+<hr>
+<div ng-if="card.facebook_id" class="row" style="padding: 20px 15px 0px;">
+   <a ng-href="https://facebook.com/{{card.facebook_id}}" target="_blank" style="text-decoration:none"><img style="vertical-align: bottom;" src="https://cdnjs.cloudflare.com/ajax/libs/webicons/2.0.0/webicons/webicon-facebook-s.png"> <span><strong>Facebook</strong> Page</span></a>
+</div>
+<!-- /social -->
 
 
 

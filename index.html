@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="App">
 
 <head>
 
@@ -9,7 +9,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>citywiz app</title>
+    <title ng-bind="ngMeta.title"></title>
+    <!--  fb metas -->
+<meta property="og:title" content="{{ngMeta.title}}"/>
+<meta property="og:type" content="website"/>
+<meta property="fb:app_id" content="1534115846894697"/>
+<meta property="og:site_name" content="citywiz.com"/>
+<meta property="og:image" content="{{ngMeta.image}}"/>
+<meta property="og:description" content="{{ngMeta.description}}"/>
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="">
+<meta name="twitter:site" content="citywiz.com">
+<meta name="twitter:title" content="{{ngMeta.title}}">
+<meta name="twitter:description" content="{{ngMeta.description}}">
+<meta name="twitter:creator" content="@citywiz">
+<!-- Twitter summary card with large image must be at least 280x150px -->
+<meta name="twitter:image:src" content="{{ngMeta.image}}">
 
     <!-- Bootstrap Core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -82,8 +97,10 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
      <script src="bower_components/angular-translate/angular-translate.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
      <script src="bower_components/angular-route/angular-route.js"></script>
+
      <script src="js/underscore-min.js"></script>
      <script src="js/restangular.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-meta/0.3.9/ngMeta.min.js"></script>
         <!-- Theme JavaScript -->
     <script src="lib/map/leaflet.js"></script>
     <script src="lib/map/L.Control.Sidebar.js"></script>

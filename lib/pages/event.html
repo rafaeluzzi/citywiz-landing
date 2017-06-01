@@ -14,6 +14,46 @@
         }
 
     </style>
+     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" >
+<div class="branch-journeys-top"></div>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+                </button>
+                <a style="padding:0 15px" class="navbar-brand page-scroll" ng-click="gotoElement('page-top')"><span><img class="logoc" style="height:50px" src="img/logoheader.svg" alt="citywiz-logo"></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" ng-click="gotoElement('download')">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-click="gotoElement('about')">About Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-click="gotoElement('contact')">Contact</a>
+                    </li>
+                    <li>
+                        <div class="switch">
+
+    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" ng-model="data.cb2" aria-label="Switch 2" ng-true-value="'es'" ng-false-value="'en'" ng-change="changeLanguage(data.cb2)">
+    <label for="language-toggle"></label>
+
+    <span class="on">ENG</span>
+    <span class="off">ESP</span>
+
+  </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div id="sidebar">
         <div class="row" style="text-align: center;"> <!-- {{eat.social_imgs[0].img_path}} -->
 <div style="position:relative;">
@@ -32,6 +72,27 @@
   </span> -->
 </div>
 
+
+
+
+
+
+
+
+    </div>
+
+    <div id="map"></div>
+    <div class="app-banner">
+        <div class="app-banner-info">
+            <a href=""><img src="img/logo.png" class="logo"></a>
+            <h2 class="slogan">{{'LANGBOARD' | translate}}</h2>
+            <p class="desc">{{'APPHERO2' | translate}}</p>
+            <a href=""><img src="img/Apple-Store-Button.png" class="download-app"></a>
+              <a ng-class="{hide: lang() == 'en'}" class="typeform-share link badge-link" href="https://rafaeluzzzi.typeform.com/to/BLySvm" data-mode="2" target="_blank"><img class="download-app" src="img/google-play-badge.svg" alt=""></a>
+                         <a ng-class="{showmeinline: lang() == 'en'}" class="typeform-share link badge-link hide" href="https://rafaeluzzzi.typeform.com/to/e4dLzv" data-mode="2" target="_blank"><img class="download-app" src="img/google-play-badge.svg" alt=""></a>
+        </div>
+      </div>
+</main>
 <script type="text/javascript-lazy">
 setTimeout(function() {
     window.thisScope = angular.element(document.getElementById('pageController')).scope();
@@ -706,25 +767,6 @@ function hasTag(tagName) {
     return false;
 };
     </script>
-
-
-
-
-
-
-    </div>
-
-    <div id="map"></div>
-    <div class="app-banner">
-        <div class="app-banner-info">
-            <a href=""><img src="img/logo.png" class="logo"></a>
-            <h2 class="slogan">{{'LANGBOARD' | translate}}</h2>
-            <p class="desc">{{'APPHERO2' | translate}}</p>
-            <a href=""><img src="img/Apple-Store-Button.png" class="download-app"></a>
-        </div>
-      </div>
-</main>
-
 <script type="text/javascript-lazy">
 
    // Offset for Main Navigation

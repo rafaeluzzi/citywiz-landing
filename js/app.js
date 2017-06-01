@@ -1,6 +1,6 @@
-var App = angular.module('App', ['pascalprecht.translate','ngRoute','ApiModel','ngSanitize','ngLoadScript']);
+var App = angular.module('App', ['pascalprecht.translate','ngRoute','ApiModel','ngSanitize','ngLoadScript','ngMeta']);
 
-App.config(function($routeProvider) {
+App.config(function($routeProvider,ngMetaProvider) {
     $routeProvider
 
       // route for the home page
@@ -20,7 +20,7 @@ App.config(function($routeProvider) {
       })
       .when('/view/:orderId/:slug', {
         templateUrl : 'lib/pages/test.html',
-        controller  : 'pageCtrl'
+        controller  : 'pageCtrl',
       })
       .when('/event/:eventId', {
         templateUrl : 'lib/pages/event.html',
@@ -34,6 +34,37 @@ App.config(function($routeProvider) {
                 redirectTo: '/'
             });
   });
+App.run(['ngMeta', function(ngMeta) {
+  ngMeta.init();
+}]);
+App.filter('ucfirst', function() {
+    return function(input, all) {
+      var reg = (all) ? /([^\W_]+[^\s-]*) */g : /([^\W_]+[^\s-]*)/;
+      return (!!input) ? input.replace(reg, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) : '';
+    }
+  });
+App.filter("un_slug", [ function(){
+ return function(str){
+    try {
+      return (str || '').replace(/-/g, ' ');
+    } catch(e) {
+      console.error("error in un_slug", e);
+      return (str || '');
+    }
+  }
+ }
+]);
+App.filter("remove_under", [ function(){
+ return function(str){
+    try {
+      return (str || '').replace(/_/g, ' ');
+    } catch(e) {
+      console.error("error in remove_under", e);
+      return (str || '');
+    }
+  }
+ }
+]);
 App.filter('removeAt', function() {
     return function (value) {
         var s = value;
@@ -43,9 +74,11 @@ App.filter('removeAt', function() {
     };
 
   });
-App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams, $location,AppRestangular,anchorSmoothScroll,urlService) {
+App.controller('pageCtrl', function ($scope,$timeout,  $window,$translate,$route,$routeParams,ngMeta,$filter, $location,AppRestangular,anchorSmoothScroll,urlService) {
 
 $scope.$route = $route;
+
+
 $scope.$location = $location;
      $scope.$routeParams = $routeParams;
      $scope.name = 'pageController';
@@ -73,6 +106,16 @@ $scope.loaded = false;
     itemdata.get().then(function(data) {
 
     $scope.card = data;
+    var unslug_cat = $filter('un_slug')(data.cat);
+    unslug_cat = $filter('ucfirst')(unslug_cat);
+    if(data.cat == 'nightlife'){
+    var text = unslug_cat+" en "+data.city;
+  }else{
+    var text = unslug_cat+" food en "+data.city;
+  }
+    ngMeta.setTitle(data.name);
+    ngMeta.setTag('description', text);
+    ngMeta.setTag('image', data.social_imgs[0].img_path);
        //$scope.viewResult();
        // after data has finished loading
        //$scope.viewResult(data.latitude,data.longitude);
@@ -236,3 +279,4 @@ App.service('urlService', function() {
   };
 
 });
+

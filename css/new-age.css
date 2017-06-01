@@ -26,6 +26,9 @@ body {
   font-family: 'Comfortaa', cursive;
 
 }
+h1 {
+    font-size: 30px;
+}
 #map{
   margin-top: 55px;
 }
