@@ -739,6 +739,9 @@ body {
     right: 30px;
     top: 25px;
 }
+#sidebar{
+      min-height: 750px;
+}
 .ion-ios-star-city{
    background-size:cover;
   background-image: url(../img/onstar.svg);
