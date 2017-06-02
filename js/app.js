@@ -207,6 +207,7 @@ App.config(['$translateProvider', function ($translateProvider) {
             DOWNLOADTITLE: "¡Comienza a descubrir tu ciudad ya!",
             DOWNLOAD: "Nuestra aplicación ya está disponible para iPhone®. ¡Descargue ahora y comienza a descubrir!"
         });
+$translateProvider.useSanitizeValueStrategy(null);
 $translateProvider.preferredLanguage('es');
 }]);
 App.service('anchorSmoothScroll', function(){
