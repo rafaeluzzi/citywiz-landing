@@ -197,4 +197,7 @@ setTimeout(function() {
 
     // Offset for Main Navigation
     $('#mainNav').removeClass( "navbar navbar-default navbar-fixed-top affix-top" ).addClass( "navbar navbar-default navbar-fixed-top affix" );
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
 </script>
