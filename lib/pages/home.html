@@ -65,10 +65,11 @@
                     <div class="device-container" >
                     <div class="device-mockup iphone6 portrait white">
                     <!-- <div class="iphne {{data.cb2}}"></div> -->
-                    <video autoplay="" class="mockup-video" data-prevent-cleanup="keep" loop="" poster="img/video/cwizanimation-222.png" preload="">
+                    <video autoplay="autoplay" class="mockup-video video" data-prevent-cleanup="keep" loop="loop" class="video" muted="muted" poster="img/video/cwizanimation-222.png" preload="">
 <source src="img/video/cwizanimation-0222.mp4" type="video/mp4">
 <source src="img/video/cwizanimation-0222.webm" type="video/webm">
 </video>
+<canvas class="canvas"></canvas>
     </div>
 
                        <!--<div class="device-mockup iphone6 portrait white">
@@ -317,4 +318,27 @@
         }
     })
 </script>
+<script type="text/javascript-lazy">
 
+var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+if (isIOS) {
+
+    var canvasVideo = new CanvasVideoPlayer({
+        videoSelector: '.video',
+        canvasSelector: '.canvas',
+        timelineSelector: false,
+        autoplay: true,
+        makeLoop: true,
+        pauseOnClick: false,
+        audio: false
+    });
+
+}else {
+
+    // Use HTML5 video
+    document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+}
+
+</script>
