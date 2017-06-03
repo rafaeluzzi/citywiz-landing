@@ -123,6 +123,12 @@ a.scrolld span {
     height: 1080px;
     position: absolute;
 }
+.background-video.madewithlove{
+  background:transparent url('../img/video/madewithlove.png') no-repeat 1150px 130px;background-size:cover;
+}
+.background-video.funpeople{
+  background:transparent url('../img/video/funpeople.png') no-repeat 500px 0;background-size:cover;
+}
 .mockup-video{
   position: absolute;
     top: auto;
@@ -425,6 +431,9 @@ input.check-toggle-round-flat:checked + label:after {
 .typeform-popup-wrapper .typeform-close-icon {right: 5px !important;}
 .typeform-modal .typeform-close {top:55px !important;}
 @media (min-width: 768px) {
+  .background-video.madewithlove{
+  background:transparent url('../img/video/madewithlove.png') no-repeat 200px 100px;background-size:cover;
+}
   .typeform-popup-wrapper .typeform-close-icon {right: -38px !important;}
   .typeform-modal .typeform-close {top:0px !important;}
   .app-banner{display: block !important;}
