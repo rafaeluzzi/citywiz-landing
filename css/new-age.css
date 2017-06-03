@@ -38,6 +38,7 @@ a {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
   color: #fdcc52;
+  cursor: pointer;
 }
 a:hover,
 a:focus {
@@ -413,8 +414,10 @@ input.check-toggle-round-flat:checked + label:after {
 }
 .app-banner{display: none;}
 .typeform-popup-wrapper .typeform-close-icon {right: 5px !important;}
+.typeform-modal .typeform-close {top:55px !important;}
 @media (min-width: 768px) {
   .typeform-popup-wrapper .typeform-close-icon {right: -38px !important;}
+  .typeform-modal .typeform-close {top:0px !important;}
   .app-banner{display: block !important;}
   .leaflet-sidebar {margin-top: 0px !important;}
   .navbar-default {
