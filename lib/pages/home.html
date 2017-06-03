@@ -343,5 +343,10 @@ if (isIOS) {
 
 
 }
-
+$('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+$(document).on('click',function(){
+    $('.collapse').collapse('hide');
+});
 </script>
