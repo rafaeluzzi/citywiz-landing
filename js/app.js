@@ -115,6 +115,7 @@ $scope.loaded = false;
   }
     ngMeta.setTitle(data.name);
     ngMeta.setTag('description', text);
+    ngMeta.setTag('vport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
     ngMeta.setTag('image', data.social_imgs[0].img_path);
        //$scope.viewResult();
        // after data has finished loading
@@ -147,7 +148,7 @@ if($scope.pageType == 'eat'){
   $scope.loadDetails();
 //load data ends
 });
-App.controller('appCtrl', function ($scope,$timeout,  $window,$translate,$route, $location,$routeParams,anchorSmoothScroll,urlService) {
+App.controller('appCtrl', function ($scope,$timeout,  $window,$translate,$route, $location,ngMeta,$routeParams,anchorSmoothScroll,urlService) {
  $scope.$route = $route;
 $scope.$location = $location;
      $scope.$routeParams = $routeParams;
@@ -156,6 +157,7 @@ $scope.$location = $location;
   $scope.data = {
   cb2: 'es'
 };
+ngMeta.setTag('vport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
    $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
