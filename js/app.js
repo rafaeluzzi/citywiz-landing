@@ -157,7 +157,6 @@ $scope.$location = $location;
   $scope.data = {
   cb2: 'es'
 };
-ngMeta.setTag('vport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
    $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
