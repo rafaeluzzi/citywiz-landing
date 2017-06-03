@@ -333,11 +333,14 @@ if (isIOS) {
         pauseOnClick: false,
         audio: false
     });
+    document.querySelectorAll('.video').playbackRate = 0.1;
 
 }else {
 
     // Use HTML5 video
     document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+
 
 }
 
