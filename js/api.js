@@ -16,7 +16,7 @@ module.factory('AppRestangular', function(Restangular) {
 
   return Restangular.withConfig(function(RestangularConfigurer) {
 
- RestangularConfigurer.setBaseUrl('http://esobusco.com/api/v1');
+ RestangularConfigurer.setBaseUrl('https://api.citywiz.com/api/v1');
     //RestangularConfigurer.setRequestSuffix('.json');
 
   });
