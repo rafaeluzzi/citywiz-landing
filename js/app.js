@@ -11,7 +11,7 @@ App.config(function($routeProvider,ngMetaProvider) {
       // route for the about page
       .when('/abt', {
         templateUrl : 'lib/pages/test.html',
-        controller  : 'pageCtrl'
+        controller  : 'appCtrl'
       })
       // route for the contact page
       .when('/view/:orderId', {
@@ -141,7 +141,6 @@ $scope.loaded = false;
 if($scope.pageType == 'eat'){
   var itemdata = AppRestangular.one("id", $scope.order_id);
 }else if($scope.pageType == 'event'){
-
   var itemdata = AppRestangular.one("eventid", $scope.order_id);
 }
 
