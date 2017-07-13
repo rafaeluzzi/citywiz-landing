@@ -1,0 +1,60 @@
+<main id="pageController" ng-controller="appCtrl" style="height:100%">
+
+<style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+        }
+        .lorem {
+            font-style: italic;
+            color: #AAA;
+        }
+
+    </style>
+     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix" >
+<div class="branch-journeys-top"></div>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+                </button>
+                <a style="padding:0 15px" class="navbar-brand page-scroll" ng-click="gotoElement('page-top')"><span><img class="logoc" style="height:50px" src="img/logoheader.svg" alt="citywiz-logo"></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" ng-click="gotoElement('download')">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-click="gotoElement('about')">About Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-click="gotoElement('contact')">Contact</a>
+                    </li>
+                    <li>
+                        <div class="switch">
+
+    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" ng-model="data.cb2" aria-label="Switch 2" ng-true-value="'es'" ng-false-value="'en'" ng-change="changeLanguage(data.cb2)">
+    <label for="language-toggle"></label>
+
+    <span class="on">ENG</span>
+    <span class="off">ESP</span>
+
+  </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container" style="margin-top: 100px;">
+        ------ Private Privacy Policy document placeholder ------
+    </div>
+</div>

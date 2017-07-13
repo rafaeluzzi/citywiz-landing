@@ -9,8 +9,12 @@ App.config(function($routeProvider,ngMetaProvider) {
         controller  : 'appCtrl'
       })
       // route for the about page
-      .when('/abt', {
-        templateUrl : 'lib/pages/test.html',
+      .when('/terms', {
+        templateUrl : 'lib/pages/terms.html',
+        controller  : 'appCtrl'
+      })
+      .when('/privacy', {
+        templateUrl : 'lib/pages/privacy.html',
         controller  : 'appCtrl'
       })
       // route for the contact page
