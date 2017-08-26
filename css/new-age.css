@@ -66,6 +66,11 @@ a.scrolld span {
     top: 75px;
     border-radius: 8px;
 }
+.app-banner.mob{
+  position: relative;
+  top: 0;
+  width: 100%;
+}
 
 .app-banner-info{
     text-align: center;
@@ -77,7 +82,12 @@ a.scrolld span {
     margin-top: 20px;
 
 }
-
+.leaflet-sidebar {
+    margin-top: 0px !important;
+}
+a.close{
+  opacity: 1;
+}
 .slogan{
     font-size: 15px;
     font-weight: 700;
@@ -428,6 +438,7 @@ input.check-toggle-round-flat:checked + label:after {
   background-color: transparent;
 }
 .app-banner{display: none;}
+.app-banner.mob{display: block;}
 .typeform-popup-wrapper .typeform-close-icon {right: 5px !important;}
 .typeform-modal .typeform-close {top:55px !important;}
 
@@ -441,6 +452,7 @@ input.check-toggle-round-flat:checked + label:after {
   .typeform-popup-wrapper .typeform-close-icon {right: -38px !important;}
   .typeform-modal .typeform-close {top:0px !important;}
   .app-banner{display: block !important;}
+  .app-banner.mob{display: none !important;}
   .leaflet-sidebar {margin-top: 0px !important;}
   .navbar-default {
     background-color: transparent;
@@ -810,6 +822,7 @@ body {
 }
 #sidebar{
       min-height: 750px;
+      border: none;
 }
 .ion-ios-star-city{
    background-size:cover;

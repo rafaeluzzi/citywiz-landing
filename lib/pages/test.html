@@ -58,6 +58,15 @@
     <div id="sidebar">
         <div class="row" style="text-align: center;"> <!-- {{eat.social_imgs[0].img_path}} -->
 <div style="position:relative;">
+<div class="app-banner mob">
+        <div class="app-banner-info">
+            <h2 class="slogan">{{'LANGBOARD' | translate}}</h2>
+            <!-- <p class="desc">{{'APPHERO2' | translate}}</p> -->
+            <a href="https://itunes.apple.com/us/app/citywiz-puerto-rico-discovery-guides/id1263551302?ls=1&mt=8"><img src="img/app-store-badge.svg" class="download-app"></a>
+             <a ng-class="{hide: lang() == 'en'}" class="typeform-share link badge-link" href="https://rafaeluzzzi.typeform.com/to/BLySvm" data-mode="2" target="_blank"><img class="download-app" src="img/google-play-badge.svg" alt=""></a>
+                         <a ng-class="{showmeinline: lang() == 'en'}" class="typeform-share link badge-link hide" href="https://rafaeluzzzi.typeform.com/to/e4dLzv" data-mode="2" target="_blank"><img class="download-app" src="img/google-play-badge.svg" alt=""></a>
+        </div>
+      </div><!-- ends app banner -->
                 <div class="menu-image"  style="height:300px;margin-bottom:0">
                 <img ng-if="card.social_imgs[0].eat_source != 'stock'" width="100%" height="300" ng-src="{{card.social_imgs[0].img_path}}?exp=-5&fit=crop&h=300&usm=20&chromasub=444&w=337&shad=20&dpr=2">
                 <img ng-if="card.social_imgs[0].eat_source == 'stock'" width="100%" height="300" ng-src="{{card.social_imgs[0].img_path}}?exp=-5&fit=crop&h=300&usm=20&chromasub=444&w=337&shad=20&dpr=2&txt64=bm90IGFjdHVhbCBpbWFnZQ&txtclr=ddd&txtsize=10">
@@ -153,7 +162,7 @@ setTimeout(function() {
         map.addControl(sidebar);
         setTimeout(function () {
             sidebar.show();
-        }, 500);
+        }, 1500);
         var eatIcon = L.icon({
     iconUrl: 'lib/map/images/marker-icon.png',
 
@@ -200,5 +209,7 @@ setTimeout(function() {
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
+    if (window.matchMedia("(min-width: 480px)").matches){
     $crisp.push(["do", "chat:show"]);
+};
 </script>
