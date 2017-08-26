@@ -452,6 +452,7 @@ input.check-toggle-round-flat:checked + label:after {
   .typeform-popup-wrapper .typeform-close-icon {right: -38px !important;}
   .typeform-modal .typeform-close {top:0px !important;}
   .app-banner{display: block !important;}
+  .screen .footer.step1{bottom: 0px}
   .app-banner.mob{display: none !important;}
   .leaflet-sidebar {margin-top: 0px !important;}
   .navbar-default {
@@ -823,6 +824,9 @@ body {
 #sidebar{
       min-height: 750px;
       border: none;
+}
+.screen .footer.step1{
+  bottom: 100px;
 }
 .ion-ios-star-city{
    background-size:cover;
