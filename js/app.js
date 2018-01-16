@@ -160,8 +160,7 @@ $scope.$location = $location;
   $scope.data = {
   cb2: 'es'
 };
-  //ngMeta.setTag('image', data.social_imgs[0].img_path);
-  alert($scope.$route);
+  ngMeta.setTag('image', 'http://citywiz.imgix.net/citywiz_cover.png');
    $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
