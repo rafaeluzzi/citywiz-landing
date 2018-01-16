@@ -160,6 +160,8 @@ $scope.$location = $location;
   $scope.data = {
   cb2: 'es'
 };
+  //ngMeta.setTag('image', data.social_imgs[0].img_path);
+  alert($scope.$route);
    $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
