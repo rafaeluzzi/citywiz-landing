@@ -192,25 +192,25 @@ App.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('en', {
             LANGBOARD: "Local Discovery Guides",
             DOWNAPP: "Get the free app!",
-            APPHERO2: "CityWiz helps you discover everything in your city. Life is easier when you know what's around you!",
+            APPHERO2: "Citywiz helps you discover #EcoAdventure #Food #Culture #Attractions #Events. Discover and connect to everything local.",
             ABOUTUSTITLE:"We believe life is easier when you know what's around you.",
-            APPABOUTUS: "<p>Citywiz is a free and easy-to-use iPhone\® App \(soon on Android\) that will guide you to discover and connect to everything local \(currently in Puerto Rico\).</p><p>If you’re looking for a place to eat, go for a night out, get the intel of nearby events or even searching for a new house to buy or rent, our app will help you stay connected to everything your city has to offer.</p><p>New city-wizards \(guides\) will be added regularly for you to discover cool and essential things like food, music, art, sports, real estate, hotels, professional services, shopping and more.</p>",
+            APPABOUTUS: "<p>Citywiz is a free and easy-to-use iPhone\® and Android\® App that will guide you to discover and connect to everything local \(currently in Puerto Rico\).</p><p>If you’re looking for a place to eat, go for a night out, get the intel of nearby events or searching for an adventure on our beautiful island, our app will help you stay connected to everything your city has to offer.</p><p>New city-wizards \(guides\) will be added regularly for you to discover cool and essential things like food, outdoor adventures, music, art, culture and more.</p>",
             TEAMTITLE: "How wonderful to meet you!",
             TEAM: "<p>We are a small but passionate Puerto Rican team focused on delivering new and fun technology products that will help you search and discover.</p>",
             DOWNLOADTITLE: "Start discovering your city now!",
-            DOWNLOAD: "Our app is available now for iPhone. Download now and get started!"
+            DOWNLOAD: "Our FREE app is available now for iPhone and Android. Download now and get started!"
 
         })
         .translations('es', {
             LANGBOARD: "Guías de descubrimiento local",
             DOWNAPP: "¡Descarga el app gratis!",
-            APPHERO2: "CityWiz te ayuda a descubrir tu ciudad. ¡La vida es más fácil cuando sabes lo que te rodea!",
+            APPHERO2: "CityWiz te ayuda a descubrir #aventureo #foodeo #turisteo #cultura en Puerto Rico. Descubre y conéctate a todo lo local.",
             ABOUTUSTITLE:"La vida es más fácil cuando sabes lo que te rodea.",
-            APPABOUTUS: "<p>Citywiz es una aplicación de iPhone® gratuita y fácil de usar (pronto en Android) que te ayudará a descubrir y conectarte con todo lo que te rodea (actualmente en Puerto Rico).</p><p>Si estás buscando un lugar para comer, salir de paseo, obtener información de eventos cercanos o incluso buscando un hogar para comprar o alquilar, nuestra aplicación te ayudará a mantenerte conectado con todo lo que tu ciudad tiene para ofrecer.</p><p>Nuevos city-wizards (guías) serán añadidos regularmente para que continúes descubriendo cosas nuevas y esenciales como comida, música, arte, deportes, bienes raíces, hoteles, servicios profesionales, compras y mucho más.</p>",
+            APPABOUTUS: "<p>Citywiz es una aplicación de iPhone\® y Android\® gratuita y fácil de usar que te ayudará a descubrir y conectarte con todo lo que te rodea \(actualmente en Puerto Rico\).</p><p>Si estás buscando un lugar para comer, salir de paseo, obtener información de eventos cercanos o buscando una aventura en nuestra hermosa isla, nuestra aplicación te ayudará a mantenerte conectado con todo lo que tu ciudad tiene para ofrecer.</p><p>Nuevos city-wizards \(guías\) serán añadidos regularmente para que continúes descubriendo cosas nuevas y esenciales como comida, aventura, música, arte, cultura y mucho más.</p>",
             TEAMTITLE: "¡Qué maravilloso conocerte!",
             TEAM: "<p>Somos un pequeño pero apasionado equipo puertorriqueño enfocado en brindar nuevos y divertidos productos tecnológicos que te ayudarán a buscar y descubrir.</p>",
             DOWNLOADTITLE: "¡Comienza a descubrir tu ciudad ya!",
-            DOWNLOAD: "Nuestra aplicación ya está disponible para iPhone®. ¡Descargue ahora y comienza a descubrir!"
+            DOWNLOAD: "Nuestra aplicación GRATIS ya está disponible para iPhone\® y Android\®. ¡Descargue ahora y comienza a descubrir!"
         });
 $translateProvider.useSanitizeValueStrategy(null);
 $translateProvider.preferredLanguage('es');
