@@ -90,8 +90,16 @@ $scope.$location = $location;
     $scope.order_id = $routeParams.eventId
     $scope.pageType = "event";
   }else{
-    $scope.order_id = $routeParams.orderId;
-    $scope.pageType = "eat";
+    var  the_id = $routeParams.orderId;
+    var claveType = the_id.charAt(0).toUpperCase();
+    if(claveType == "x"){
+      $scope.order_id = the_id.substr(1);
+      $scope.pageType = "place";
+    }else{
+      $scope.order_id = the_id;
+      $scope.pageType = "eat";
+    }
+    
   }
   $scope.message = 'Look! I am an about page.';
 //load data
@@ -144,6 +152,8 @@ $scope.loaded = false;
   };
 if($scope.pageType == 'eat'){
   var itemdata = AppRestangular.one("id", $scope.order_id);
+}else if($scope.pageType = 'place'){
+  var itemdata = AppRestangular.one("placeid", $scope.order_id);  
 }else if($scope.pageType == 'event'){
   var itemdata = AppRestangular.one("eventid", $scope.order_id);
 }
