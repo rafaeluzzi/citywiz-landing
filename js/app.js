@@ -95,7 +95,6 @@ $scope.$location = $location;
     if(claveType == "X"){
       $scope.order_id = the_id.substr(1);
       $scope.pageType = "place";
-      alert($scope.order_id);
     }else{
       $scope.order_id = the_id;
       $scope.pageType = "eat";
@@ -121,7 +120,7 @@ $scope.loaded = false;
 
     $scope.card = data;
     if($scope.pageType == 'place'){
-      alert(JSON.stringify(data));
+      console.log("is place: "+JSON.stringify(data));
     }
     var unslug_cat = $filter('un_slug')(data.cat);
     unslug_cat = $filter('ucfirst')(unslug_cat);
