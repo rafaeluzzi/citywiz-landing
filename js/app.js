@@ -99,6 +99,7 @@ $scope.$location = $location;
     }else{
       $scope.order_id = the_id;
       $scope.pageType = "eat";
+      console.log("is an eat");
     }
     
   }
