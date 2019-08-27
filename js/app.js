@@ -95,6 +95,7 @@ $scope.$location = $location;
     if(claveType == "x"){
       $scope.order_id = the_id.substr(1);
       $scope.pageType = "place";
+      alert($scope.order_id);
     }else{
       $scope.order_id = the_id;
       $scope.pageType = "eat";
