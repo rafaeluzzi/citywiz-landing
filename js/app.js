@@ -92,7 +92,7 @@ $scope.$location = $location;
   }else{
     var the_id = $routeParams.orderId;
     var claveType = the_id.charAt(0).toUpperCase();
-    if(claveType == "x"){
+    if(claveType == "X"){
       $scope.order_id = the_id.substr(1);
       $scope.pageType = "place";
       alert($scope.order_id);
