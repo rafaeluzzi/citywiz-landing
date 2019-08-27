@@ -118,6 +118,9 @@ $scope.loaded = false;
     itemdata.get().then(function(data) {
 
     $scope.card = data;
+    if($scope.pageType == 'place'){
+      alert(JSON.stringify(data));
+    }
     var unslug_cat = $filter('un_slug')(data.cat);
     unslug_cat = $filter('ucfirst')(unslug_cat);
     if(data.cat == 'nightlife'){
