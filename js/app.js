@@ -90,7 +90,7 @@ $scope.$location = $location;
     $scope.order_id = $routeParams.eventId
     $scope.pageType = "event";
   }else{
-    var  the_id = $routeParams.orderId;
+    var the_id = $routeParams.orderId;
     var claveType = the_id.charAt(0).toUpperCase();
     if(claveType == "x"){
       $scope.order_id = the_id.substr(1);
