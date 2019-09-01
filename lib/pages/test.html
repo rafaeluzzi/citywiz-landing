@@ -147,6 +147,16 @@ display: block;">{{'ADDRESS' | translate}}</title>
       </div>
 </main>
 <script type="text/javascript-lazy">
+  deeplink.setup({
+    iOS: {
+        appName: "citywiz",
+        appId: "1263551302",
+    },
+    android: {
+        appId: "com.citywiz.app"
+    },
+    fallback: false
+});
 setTimeout(function() {
     window.thisScope = angular.element(document.getElementById('pageController')).scope();
         var map = L.map('map');
@@ -212,4 +222,7 @@ setTimeout(function() {
     if (window.matchMedia("(min-width: 480px)").matches){
     $crisp.push(["do", "chat:show"]);
 };
+window.onload = function() {
+    deeplink.open("citywiz://id?cityclave=7035");
+}
 </script>
