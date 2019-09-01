@@ -215,18 +215,3 @@ setTimeout(function() {
 };
 
 </script>
-<script type="text/javascript">
-  deeplink.setup({
-    iOS: {
-        appName: "citywiz",
-        appId: "1263551302",
-    },
-    android: {
-        appId: "com.citywiz.app"
-    },
-    fallback: false
-});
-  window.onload = function() {
-      deeplink.open("citywiz://id?cityclave=7035");
-  }
-</script>
