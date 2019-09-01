@@ -145,14 +145,13 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
 
           var hash = window.location.hash.split("/");
           if(hash[1] == 'view'){
-            var the_id = hash[2];
-            var claveType = the_id.charAt(0).toUpperCase();
+            var the_id = window.location.hash[2].split("?");
+            var claveType = the_id[0].charAt(0).toUpperCase();
             if(claveType == "X"){
-              var elID = the_id;
+              var elID = the_id[0];
             }else{
-                var elID = "f"+the_id;
+                var elID = "f"+the_id[0];
             }
-            alert(elID);
             deeplink.open("citywiz://id?cityclave="+elID);
           }
 
