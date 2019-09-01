@@ -116,7 +116,7 @@ branch.init('key_live_dpAFzF2PINv6LWCbfImrZphjFummdR1R');
     <script src="lib/map/L.Control.Sidebar.js"></script>
     <script src="js/new-age.js"></script>
     <script src="js/canvas-video-player.js"></script>
-    <script src="js/browser-deeplink.js?v=3" type="text/javascript"></script>
+    <script src="js/browser-deeplink.js?v=4" type="text/javascript"></script>
  <script src="js/api.js"></script>
 
     <script src="js/app.js"></script>
@@ -142,8 +142,19 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
         fallback: false
         });
       window.onload = function() {
-          alert(window.location.hash);
-          deeplink.open("citywiz://id?cityclave=f7035");
+
+          var hash = window.location.hash.split("/");
+          if(hash[1] == 'view'){
+            var the_id = hash[2];
+            var claveType = the_id.charAt(0).toUpperCase();
+            if(claveType == "X"){
+              var elID = the_id;
+            }else{
+                var elID = "f"+the_id;
+            }
+            deeplink.open("citywiz://id?cityclave="+elID);
+          }
+
       }
     </script>
 
