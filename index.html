@@ -154,15 +154,6 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
 
     <script type="text/javascript">
       window.onload = function() {
-        deeplink.setup({
-  iOS: {
-      appName: "citywiz-puerto-rico",
-      appId: "1263551302",
-  },
-  android: {
-      appId: "com.citywiz.app"
-  }
-});
           var hash = window.location.hash.split("/");
           console.log(hash);
           if(hash[1] == 'view'){
