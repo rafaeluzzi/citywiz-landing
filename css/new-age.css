@@ -1111,6 +1111,11 @@ transform: translate3d(0, 0, 0);
   opacity: 1;
 
 }
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
 
 .lab-modal-body h4 {
   font-weight: bold !important;
