@@ -100,9 +100,25 @@ $scope.$location = $location;
       $scope.pageType = "eat";
       console.log("is an eat");
     }
-    
+
   }
   $scope.message = 'Look! I am an about page.';
+  $scope.openInApp = () =>{
+    var hash = window.location.hash.split("/");
+    console.log(hash);
+    if(hash[1] == 'view'){
+      var the_id = hash[2].split("?");
+      var claveType = the_id[0].charAt(0);
+      console.log('clavetype: '+claveType);
+      if(claveType == "x"){
+        var elID = the_id[0];
+      }else{
+          var elID = "f"+the_id[0];
+      }
+      console.log("citywiz://id?cityclave="+elID);
+      deeplink.open("citywiz://id?cityclave="+elID);
+    }
+  }
 //load data
 $scope.gotoElement = function (eID){
       // set the location.hash to the id of
@@ -157,7 +173,7 @@ $scope.loaded = false;
 if($scope.pageType == 'eat'){
   var itemdata = AppRestangular.one("id", $scope.order_id);
 }else if($scope.pageType = 'place'){
-  var itemdata = AppRestangular.one("placeid", $scope.order_id);  
+  var itemdata = AppRestangular.one("placeid", $scope.order_id);
 }else if($scope.pageType == 'event'){
   var itemdata = AppRestangular.one("eventid", $scope.order_id);
 }
@@ -299,4 +315,3 @@ App.service('urlService', function() {
   };
 
 });
-
