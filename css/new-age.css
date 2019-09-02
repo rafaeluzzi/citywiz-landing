@@ -1125,7 +1125,7 @@ transform: translate3d(0, 0, 0);
 }
 
 .lab-modal-body {
-  position: relative;
+  position: absolute;
   bottom: -250px;
   margin: 150px auto 0;
   padding: 40px;
