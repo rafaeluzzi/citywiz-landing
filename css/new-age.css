@@ -1106,7 +1106,7 @@ transform: translate3d(0, 0, 0);
 .modal.fade.in .lab-modal-body {
   bottom: 0;
   opacity: 1;
-  z
+  z-index: 99999;
 }
 
 .lab-modal-body h1 {
@@ -1126,10 +1126,8 @@ transform: translate3d(0, 0, 0);
   bottom: -250px;
   margin: 150px auto 0;
   padding: 40px;
-  max-width: 60%;
   height: auto;
-  background-color: rgb(248, 250, 247);
-  border: 1px solid #BEBEBE;
+  background-color: rgba(248, 250, 247,.8);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
