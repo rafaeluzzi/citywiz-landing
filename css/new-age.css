@@ -1105,6 +1105,9 @@ transform: translate3d(0, 0, 0);
 /*** /loader ***/
 .modal{
   z-index: 9999 !important;
+  top: 55vh;
+  height: 45vh;
+
 }
 .modal.fade.in .lab-modal-body {
   bottom: 0;
