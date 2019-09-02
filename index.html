@@ -156,7 +156,7 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
       window.onload = function() {
           var hash = window.location.hash.split("/");
           console.log(hash);
-          if(hash[1] == 'view'){
+          if(hash[1] == 'view' && window.matchMedia("(min-width: 480px)").matches){
             setTimeout(function() {
               $("#lab-slide-bottom-popup").modal("show");
             }, 2000);
