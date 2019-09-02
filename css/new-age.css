@@ -1121,16 +1121,16 @@ transform: translate3d(0, 0, 0);
   line-height: 1.62;
   font-weight: 300;
   font-size: 1.62rem;
-  color: #666;
+  color: #FFF;
 }
 
 .lab-modal-body {
   position: absolute;
   bottom: -250px;
   margin: 150px auto 0;
-  padding: 40px;
+  padding: 25px;
   height: auto;
-  background-color: rgba(233, 168, 59,.8);
+  background-color: rgba(233, 168, 59,.9);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
