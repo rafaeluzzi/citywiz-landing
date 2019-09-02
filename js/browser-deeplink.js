@@ -37,6 +37,7 @@
         androidDisabled: false,
         fallback: true,
         fallbackToWeb: false,
+        callback: true,
         delay: 1000,
         delta: 500
     }
@@ -221,7 +222,9 @@
             uri = uriArr.join(';') + ";end";
         }
 
-        if (settings.fallback|| settings.fallbackToWeb) {
+        if (settings.callback) {
+            timeout = setTimeout(settings.callback, settings.delay);
+        }else if (settings.fallback|| settings.fallbackToWeb) {
             timeout = setTimeout(openFallback(Date.now()), settings.delay);
         }
 
