@@ -138,20 +138,20 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
     </script>
 
     <script type="text/javascript">
-    deeplink.setup({
-        fallback: false
-        });
       window.onload = function() {
-
+          deeplink.setup({
+            fallback: false
+          });
           var hash = window.location.hash.split("/");
           if(hash[1] == 'view'){
             var the_id = window.location.hash[2].split("?");
-            var claveType = the_id[0].charAt(0).toUpperCase();
-            if(claveType == "X"){
+            var claveType = the_id[0].charAt(0);
+            if(claveType == "x"){
               var elID = the_id[0];
             }else{
                 var elID = "f"+the_id[0];
             }
+            console.log("citywiz://id?cityclave="+elID);
             deeplink.open("citywiz://id?cityclave="+elID);
           }
 
