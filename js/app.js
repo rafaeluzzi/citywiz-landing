@@ -104,15 +104,7 @@ $scope.$location = $location;
   }
   $scope.message = 'Look! I am an about page.';
   $scope.openInApp = () =>{
-    deeplink.setup({
-iOS: {
-  appName: "citywiz-puerto-rico",
-  appId: "1263551302",
-},
-android: {
-  appId: "com.citywiz.app"
-}
-});
+    
     var hash = window.location.hash.split("/");
     console.log(hash);
     if(hash[1] == 'view'){
