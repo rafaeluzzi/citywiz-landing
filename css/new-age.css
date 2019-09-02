@@ -1112,8 +1112,7 @@ transform: translate3d(0, 0, 0);
 
 }
 
-.lab-modal-body h1 {
-  font-size: 4rem;
+.lab-modal-body h4 {
   font-weight: bold !important;
   color: #fff;
 }
