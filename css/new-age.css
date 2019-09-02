@@ -1114,14 +1114,17 @@ transform: translate3d(0, 0, 0);
 
 .lab-modal-body h1 {
   font-size: 4rem;
+  font-weight: bold !important;
+  color: #fff;
 }
 
 .lab-modal-body p {
   margin: 0 0 1.62rem 0;
   line-height: 1.62;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.62rem;
-  color: #FFF;
+  color: #fff;
+
 }
 
 .lab-modal-body {
@@ -1130,7 +1133,7 @@ transform: translate3d(0, 0, 0);
   margin: 150px auto 0;
   padding: 25px;
   height: auto;
-  background-color: rgba(233, 168, 59,.9);
+  background-color: rgba(233, 168, 59,.95);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
@@ -1145,5 +1148,5 @@ transform: translate3d(0, 0, 0);
 }
 
 .popup-button {
-  margin-top: 70px;
+  margin-top: 10px;
 }
