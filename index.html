@@ -135,6 +135,21 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
 
     }, 1200);
   });
+  jQuery(document).ready(function($) {
+  // auto timer
+  /*setTimeout(function() {
+    $("#lab-slide-bottom-popup").modal("show");
+  }, 5000); // optional - automatically opens in xxxx milliseconds*/
+
+  $(document).ready(function() {
+    $(".lab-slide-up")
+      .find("a")
+      .attr("data-toggle", "modal");
+    $(".lab-slide-up")
+      .find("a")
+      .attr("data-target", "#lab-slide-bottom-popup");
+  });
+});
     </script>
 
     <script type="text/javascript">
@@ -145,6 +160,7 @@ document.write('<script type="text/javascript">window.$crisp=[];window.CRISP_WEB
           var hash = window.location.hash.split("/");
           console.log(hash);
           if(hash[1] == 'view'){
+            $("#lab-slide-bottom-popup").modal("show");
             var the_id = hash[2].split("?");
             var claveType = the_id[0].charAt(0);
             console.log('clavetype: '+claveType);
