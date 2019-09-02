@@ -1116,6 +1116,11 @@ transform: translate3d(0, 0, 0);
     background-color: #343a40;
     border-color: #343a40;
 }
+.btn-link {
+    font-weight: 400;
+    color: #f0f0f0;
+    text-decoration: none;
+}
 
 .lab-modal-body h4 {
   font-weight: bold !important;
