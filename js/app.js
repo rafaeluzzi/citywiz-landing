@@ -122,6 +122,25 @@ $scope.$location = $location;
       window.open("citywiz://id?cityclave="+elID);
     }
   }
+  $scope.openInApptest = () =>{
+
+    var hash = window.location.hash.split("/");
+    console.log(hash);
+    if(hash[1] == 'view'){
+      var the_id = hash[2].split("?");
+      var claveType = the_id[0].charAt(0);
+      console.log('clavetype: '+claveType);
+      if(claveType == "x"){
+        var elID = the_id[0];
+      }else{
+          var elID = "f"+the_id[0];
+      }
+      console.log("citywiz://id?cityclave="+elID);
+
+      //deeplink.open("citywiz://id?cityclave="+elID);
+      window.location.replace("citywiz://id?cityclave="+elID);
+    }
+  }
 //load data
 $scope.gotoElement = function (eID){
       // set the location.hash to the id of
