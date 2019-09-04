@@ -44,6 +44,10 @@ a:hover,
 a:focus {
   color: #fcbd20;
 }
+.btn:hover ,.btn:focus{
+  color: #fff !important;
+text-decoration: none;
+}
 a.scrolld span {
     position: absolute;
     bottom: 24px;
