@@ -104,7 +104,7 @@ $scope.$location = $location;
   }
   $scope.message = 'Look! I am an about page.';
   $scope.openInApp = () =>{
-    
+
     var hash = window.location.hash.split("/");
     console.log(hash);
     if(hash[1] == 'view'){
@@ -117,7 +117,9 @@ $scope.$location = $location;
           var elID = "f"+the_id[0];
       }
       console.log("citywiz://id?cityclave="+elID);
-      deeplink.open("citywiz://id?cityclave="+elID);
+
+      //deeplink.open("citywiz://id?cityclave="+elID);
+      window.open("citywiz://id?cityclave="+elID);
     }
   }
 //load data
