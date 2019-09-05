@@ -167,6 +167,9 @@ $scope.loaded = false;
   }else{
     var text = unslug_cat+" food en "+data.city;
   }
+  if($scope.pageType == 'place'){
+    var text = unslug_cat;
+  };
     ngMeta.setTitle(data.name);
     ngMeta.setTag('description', text);
     ngMeta.setTag('vport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
