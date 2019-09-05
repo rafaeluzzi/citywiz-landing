@@ -170,9 +170,7 @@ $scope.loaded = false;
     ngMeta.setTitle(data.name);
     ngMeta.setTag('description', text);
     ngMeta.setTag('vport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-    ngMeta.setTag('image', data.social_imgs[0].img_path+'?fit=crop&w=1200&h=630');
-    ngMeta.setTag('og:image:width','1200');
-    ngMeta.setTag('og:image:height','630');
+    ngMeta.setTag('image', data.social_imgs[0].img_path);
        //$scope.viewResult();
        // after data has finished loading
        //$scope.viewResult(data.latitude,data.longitude);
@@ -214,9 +212,7 @@ $scope.$location = $location;
   $scope.data = {
   cb2: 'es'
 };
-  ngMeta.setTag('image', 'http://citywiz.imgix.net/citywiz_cover.png?fit=crop&w=1200&h=630');
-  ngMeta.setTag('og:image:width','1200');
-  ngMeta.setTag('og:image:height','630');
+  ngMeta.setTag('image', 'http://citywiz.imgix.net/citywiz_cover.png');
    $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
