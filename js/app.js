@@ -17,6 +17,10 @@ App.config(function($routeProvider,ngMetaProvider) {
         templateUrl : 'lib/pages/privacy.html',
         controller  : 'appCtrl'
       })
+      .when('/guides', {
+        templateUrl : 'lib/pages/guides.html',
+        controller  : 'appCtrl'
+      })
       // route for the contact page
       .when('/view/:orderId', {
         templateUrl : 'lib/pages/test.html',
@@ -246,26 +250,34 @@ setTimeout(function() {
 App.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('en', {
             LANGBOARD: "Local Discovery Guides",
+            APPBOARD: "Your App for Puerto Rico tourism!",
             DOWNAPP: "Get the free app!",
+            VIEWBLOG: "View guides & articles",
             APPHERO2: "Citywiz helps you discover #EcoAdventure #Food #Culture #Attractions #Events. Discover and connect to everything local.",
             ABOUTUSTITLE:"We believe life is easier when you know what's around you.",
             APPABOUTUS: "<p>Citywiz is a free and easy-to-use iPhone\® and Android\® App that will guide you to discover and connect to everything local \(currently in Puerto Rico\).</p><p>If you’re looking for a place to eat, go for a night out, get the intel of nearby events or searching for an adventure on our beautiful island, our app will help you stay connected to everything your city has to offer.</p><p>New city-wizards \(guides\) will be added regularly for you to discover cool and essential things like food, outdoor adventures, music, art, culture and more.</p>",
             TEAMTITLE: "How wonderful to meet you!",
             TEAM: "<p>We are a small but passionate Puerto Rican team focused on delivering new and fun technology products that will help you search and discover.</p>",
             DOWNLOADTITLE: "Start discovering your city now!",
-            DOWNLOAD: "Our FREE app is available now for iPhone and Android. Download now and get started!"
+            DOWNLOAD: "Our FREE app is available now for iPhone and Android. Download now and get started!",
+            ARTICLESHERO: "Discover places to visit, places to eat or stay and meet other tourists through our articles.",
+            INSTAGRAMCOPY: "Follow our Instagram where we feature Puerto Rico's top places and food tru the lens of awesome local photographers/tourists who love the island and you should follow. Tap on the images for info and credit."
 
         })
         .translations('es', {
             LANGBOARD: "Guías de descubrimiento local",
+            APPBOARD: "Tu App pal' turisteo!",
             DOWNAPP: "¡Descarga el app gratis!",
+            VIEWBLOG: "Ver guías y artículos",
             APPHERO2: "CityWiz te ayuda a descubrir #aventureo #foodeo #turisteo #cultura en Puerto Rico. Descubre y conéctate a todo lo local.",
             ABOUTUSTITLE:"La vida es más fácil cuando sabes lo que te rodea.",
             APPABOUTUS: "<p>Citywiz es una aplicación de iPhone\® y Android\® gratuita y fácil de usar que te ayudará a descubrir y conectarte con todo lo que te rodea \(actualmente en Puerto Rico\).</p><p>Si estás buscando un lugar para comer, salir de paseo, obtener información de eventos cercanos o buscando una aventura en nuestra hermosa isla, nuestra aplicación te ayudará a mantenerte conectado con todo lo que tu ciudad tiene para ofrecer.</p><p>Nuevos city-wizards \(guías\) serán añadidos regularmente para que continúes descubriendo cosas nuevas y esenciales como comida, aventura, música, arte, cultura y mucho más.</p>",
             TEAMTITLE: "¡Qué maravilloso conocerte!",
             TEAM: "<p>Somos un pequeño pero apasionado equipo puertorriqueño enfocado en brindar nuevos y divertidos productos tecnológicos que te ayudarán a buscar y descubrir.</p>",
             DOWNLOADTITLE: "¡Comienza a descubrir tu ciudad ya!",
-            DOWNLOAD: "Nuestra aplicación GRATIS ya está disponible para iPhone\® y Android\®. ¡Descargue ahora y comienza a descubrir!"
+            DOWNLOAD: "Nuestra aplicación GRATIS ya está disponible para iPhone\® y Android\®. ¡Descargue ahora y comienza a descubrir!",
+            ARTICLESHERO: "Descubre lugares para visitar, sitios para comer o quedarse y conoce a otros turistas a través de nuestros artículos.",
+            INSTAGRAMCOPY: "Siga nuestro Instagram donde presentamos los mejores lugares y comida de Puerto Rico capturados por increíbles fotógrafos / turisteros locales que aman la isla y los cuales debe seguir. Toque las imágenes para obtener información y crédito."
         });
 $translateProvider.useSanitizeValueStrategy(null);
 $translateProvider.preferredLanguage('es');
