@@ -277,7 +277,7 @@ App.config(['$translateProvider', function ($translateProvider) {
             DOWNLOADTITLE: "¡Comienza a descubrir tu ciudad ya!",
             DOWNLOAD: "Nuestra aplicación GRATIS ya está disponible para iPhone\® y Android\®. ¡Descargue ahora y comienza a descubrir!",
             ARTICLESHERO: "Descubre lugares para visitar, sitios para comer o quedarse y conoce a otros turistas a través de nuestros artículos.",
-            INSTAGRAMCOPY: "Siga nuestro Instagram donde presentamos los mejores lugares y comida de Puerto Rico capturados por increíbles fotógrafos / turisteros locales que aman la isla y los cuales debe seguir. Toque las imágenes para obtener información y crédito."
+            INSTAGRAMCOPY: "Sigue nuestro Instagram donde presentamos los mejores lugares y comida de Puerto Rico capturados por increíbles fotógrafos / turisteros locales que aman la isla y los cuales debe seguir. Toque las imágenes para obtener información y crédito."
         });
 $translateProvider.useSanitizeValueStrategy(null);
 $translateProvider.preferredLanguage('es');
