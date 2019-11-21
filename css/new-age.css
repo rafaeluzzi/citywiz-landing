@@ -1522,7 +1522,7 @@ div.container-home .nav-mainmenu li hr.animate-hr{
 div.container-home .nav-mainmenu li {
   cursor: pointer;
   display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
